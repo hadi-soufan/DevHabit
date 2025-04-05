@@ -21,6 +21,12 @@ builder.Services.AddOpenTelemetry()
         .AddRuntimeInstrumentation())
     .UseOtlpExporter();
 
+builder.Logging.AddOpenTelemetry(options =>
+{
+    options.IncludeScopes = true;
+    options.IncludeFormattedMessage = true;
+});
+
 WebApplication app = builder.Build();
 
 if (app.Environment.IsDevelopment())
