@@ -11,13 +11,19 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{677F4929
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DevHabit.Tests.Unit", "tests\DevHabit.Tests.Unit\DevHabit.Tests.Unit.csproj", "{6DB19F40-E479-4E29-ADC1-A22F9CD3DFC4}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{C165199E-85A0-430E-A9B7-0E6CD69882FE}"
+	ProjectSection(SolutionItems) = preProject
+		.editorconfig = .editorconfig
+		Directory.Build.props = Directory.Build.props
+		Directory.Packages.props = Directory.Packages.props
+	EndProjectSection
+EndProject
+Project("{E53339B2-1760-4266-BCC7-CA923CBCF16C}") = "docker-compose", "docker-compose.dcproj", "{24CB9068-F073-4028-A23F-5E80303C48F2}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
 		Release|Any CPU = Release|Any CPU
-	EndGlobalSection
-	GlobalSection(SolutionProperties) = preSolution
-		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
 		{0924E9D3-DDD1-4AB2-BC41-28B53C6E2AF6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
@@ -28,6 +34,13 @@ Global
 		{6DB19F40-E479-4E29-ADC1-A22F9CD3DFC4}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6DB19F40-E479-4E29-ADC1-A22F9CD3DFC4}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6DB19F40-E479-4E29-ADC1-A22F9CD3DFC4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{24CB9068-F073-4028-A23F-5E80303C48F2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{24CB9068-F073-4028-A23F-5E80303C48F2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{24CB9068-F073-4028-A23F-5E80303C48F2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{24CB9068-F073-4028-A23F-5E80303C48F2}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{0924E9D3-DDD1-4AB2-BC41-28B53C6E2AF6} = {F9997143-C024-487A-BE6B-5259EAA10D1E}
