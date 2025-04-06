@@ -15,7 +15,7 @@ builder.Services.AddOpenApi();
 
 // Extensions
 builder.Services.AddCustomDbContext(builder.Configuration);
-builder.Services.AddCustomOpenTelemetry(builder.Configuration, builder.Environment);
+builder.Services.AddCustomOpenTelemetry(builder.Environment);
 
 WebApplication app = builder.Build();
 
