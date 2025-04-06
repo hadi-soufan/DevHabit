@@ -14,11 +14,11 @@ public static class DatabaseExtension
         {
             await dbContext.Database.MigrateAsync();
 
-            app.Logger.LogInformation("-------->>>> Database migrations applied successfully.");
+            app.Logger.LogInformation("Database migrations applied successfully.");
         }
         catch (Exception e)
         {
-            app.Logger.LogError(e, "-------->>>> An error occurred while applying database migrations.");
+            app.Logger.LogError(e, "An error occurred while applying database migrations.");
             throw;
         }
     }
