@@ -12,5 +12,7 @@
     </None>
     <None Include="docker-compose.yml" />
     <None Include=".dockerignore" />
+    <None Include="src\DevHabit.Api\Extensions\ConnectionStringExtension.cs" />
+    <None Include="src\DevHabit.Api\Extensions\OpenTelemetryExtension.cs" />
   </ItemGroup>
 </Project>
