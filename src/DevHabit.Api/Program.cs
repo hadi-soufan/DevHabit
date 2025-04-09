@@ -1,18 +1,20 @@
-using DevHabit.Api.Database;
 using DevHabit.Api.Extensions;
-using Microsoft.EntityFrameworkCore;
-using Microsoft.EntityFrameworkCore.Migrations;
-using Newtonsoft.Json.Serialization;
-using Npgsql;
-using OpenTelemetry;
-using OpenTelemetry.Metrics;
-using OpenTelemetry.Resources;
-using OpenTelemetry.Trace;
+using FluentValidation;
 
 WebApplicationBuilder builder = WebApplication.CreateBuilder(args);
 
 
 builder.Services.AddOpenApi();
+
+builder.Services.AddValidatorsFromAssemblyContaining<Program>();
+
+builder.Services.AddProblemDetails(options =>
+{
+    options.CustomizeProblemDetails = context =>
+    {
+        context.ProblemDetails.Extensions.TryAdd("requestId", context.HttpContext.TraceIdentifier);
+    };
+});
 
 // Extensions
 builder.Services.AddCustomControllers();
