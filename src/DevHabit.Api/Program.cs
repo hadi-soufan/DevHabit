@@ -1,4 +1,5 @@
 using DevHabit.Api.Extensions;
+using DevHabit.Api.Middlewares;
 using FluentValidation;
 
 WebApplicationBuilder builder = WebApplication.CreateBuilder(args);
@@ -16,6 +17,9 @@ builder.Services.AddProblemDetails(options =>
     };
 });
 
+builder.Services.AddExceptionHandler<ValidationExceptionHandler>();
+builder.Services.AddExceptionHandler<GlobalExceptionHandler>();
+
 // Extensions
 builder.Services.AddCustomControllers();
 builder.Services.AddCustomDbContext(builder.Configuration);
@@ -31,6 +35,8 @@ if (app.Environment.IsDevelopment())
 }
 
 app.UseHttpsRedirection();
+
+app.UseExceptionHandler();
 
 app.MapControllers();
 
