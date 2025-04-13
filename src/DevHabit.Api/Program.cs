@@ -1,5 +1,9 @@
+using DevHabit.Api.DTOs.Habits;
+using DevHabit.Api.Entities;
 using DevHabit.Api.Extensions;
 using DevHabit.Api.Middlewares;
+using DevHabit.Api.Services.Sorting;
+using DevHabit.Api.Services;
 using FluentValidation;
 
 WebApplicationBuilder builder = WebApplication.CreateBuilder(args);
@@ -24,6 +28,7 @@ builder.Services.AddExceptionHandler<GlobalExceptionHandler>();
 builder.Services.AddCustomControllers();
 builder.Services.AddCustomDbContext(builder.Configuration);
 builder.Services.AddCustomOpenTelemetry(builder.Environment);
+builder.Services.AddCustomServices();
 
 WebApplication app = builder.Build();
 
