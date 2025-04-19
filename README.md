@@ -1,11 +1,8 @@
-Here’s a professional `README.md` file tailored for your **DevHabit API**, based on the structure, features, and technologies you provided:
-
----
-
 ```markdown
 # DevHabit API
 
-DevHabit is a RESTful API built with ASP.NET Core that helps users manage habits and their associated tags. It provides full CRUD operations, filtering, sorting, pagination, data shaping, and HATEOAS-compliant responses for clients that support it.
+DevHabit is a RESTful API built with ASP.NET Core that helps users manage habits and their associated tags.
+ It provides full CRUD operations, filtering, sorting, pagination, data shaping, and HATEOAS-compliant responses for clients that support it.
 
 ---
 
@@ -153,8 +150,8 @@ Integrated with OpenTelemetry to support:
 1. **Clone the repo**
 
 ```bash
-git clone https://github.com/your-org/devhabit-api.git
-cd devhabit-api
+git clone [https://github.com/your-org/devhabit-api.git](https://github.com/hadi-soufan/DevHabit.git)
+cd src/DevHabit
 ```
 
 2. **Configure your database connection**
@@ -184,17 +181,3 @@ dotnet run
 
 ---
 
-## 🧑‍💻 Contributing
-
-We welcome contributions! Please fork the repo and submit pull requests for review.
-
----
-
-## 📄 License
-
-This project is licensed under the MIT License.
-```
-
----
-
-Let me know if you want this tailored for a specific audience (e.g., external devs, internal team) or want deployment/Docker setup added.
